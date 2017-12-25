@@ -6,9 +6,9 @@ https://translate.google.cn/translate_tts?ie=UTF-8&q=test&tl=en&total=1&idx=0&te
 但是这个接口存在问题，因为是未开放的接口，所以服务器对此接口做了验证限制。
 主要有下面几个问题：
 
-1.您必须在查询参数中包含“client”（client = t似乎有效）
+1. 您必须在查询参数中包含“client”（client = t似乎有效）
 2.（如果您想使用AJAX方式调用它），HTTP请求的Referer必须是```https://translate.google.com/```
-3.查询参数中的tk值来源于```https://translate.google.com/```, 生成方法类似```tk = hash（q，TKK）```，其中q为语音内容文本，TKK是服务器返回的一个值,可以进入```https://translate.google.com/```, 在控制台中输入```window.TKK```获取，但是这个值是动态变化的，网络上有人说一个小时左右，但是往往一个小时以后还是可以使用.
+3. 查询参数中的tk值来源于```https://translate.google.com/```, 生成方法类似```tk = hash（q，TKK）```，其中q为语音内容文本，TKK是服务器返回的一个值,可以进入```https://translate.google.com/```, 在控制台中输入```window.TKK```获取，但是这个值是动态变化的，网络上有人说一个小时左右，但是往往一个小时以后还是可以使用.
 
 ### tk值
 以下贴出相关代码：
